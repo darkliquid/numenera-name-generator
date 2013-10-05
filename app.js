@@ -3749,7 +3749,7 @@ function generate() {
       str = str.substr(0, index) + ' ' + capitaliseFirstLetter(str.substr(index));
   }
   
-  str = str.replace(/ \w$/,'');
+  str = str.replace(/ \w$/,'').replace(' -','-').replace('- ','-').replace(/-$/,'').replace(/ \w$/,'');
   
   name.innerHTML += str+'<br>';
 }
