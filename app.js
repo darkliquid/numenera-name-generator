@@ -35924,8 +35924,8 @@ if (!Object.keys) {
 
 }
 
-function generate(starting_part) {
-	var last_part = starting_part ? starting_part : "   ",
+function generate() {
+	var last_part = "   ",
 	    name = "";
 	
 	while(true) {
@@ -36055,7 +36055,7 @@ function generate(starting_part) {
 	name = processed.join(" ").replace(/[$-]$/,"").replace(/^-/, "");
 
 	document.getElementById("name").innerHTML += name + '<br>';
-	return name;
+	return false;
 }
 
 document.getElementById('generate').onclick = generate;
